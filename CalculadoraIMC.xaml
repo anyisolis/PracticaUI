@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PracticaUI.CalculadoraIMC"
+             Title="CalculadoraIMC">
+
+    <!-- ScrollView nos permite deslizar si el teclado tapa parte de la pantalla -->
+    <ScrollView>
+
+        <!-- VerticalStackLayout: apila los controles uno debajo de otro -->
+        <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="Center">
+            <Label Text="Calculadora IMC" FontSize="24" FontAttributes="Bold"
+                   TextColor="#0ED9F0" HorizontalOptions="Center"/>
+
+            <!-- Campo para el peso -->
+            <Label Text="Peso (KG):" TextColor="Black" FontAttributes="Bold"/>
+
+            <Border Stroke="Black" StrokeShape="RoundRectangle 8" Padding="5,0">
+                <Entry x:Name="txtPeso" Placeholder="Ejemplo: 70.5" Keyboard="Numeric"/>
+            </Border>
+
+            <!-- Campo para la altura -->
+            <Label Text="Altura (M):" TextColor="Black" FontAttributes="Bold"/>
+
+            <Border Stroke="Black" StrokeShape="RoundRectangle 8" Padding="5,0">
+                <Entry x:Name="txtAltura" Placeholder="Ejemplo: 1.75" Keyboard="Numeric"/>
+            </Border>
+
+            <!-- Botón de cálculo -->
+            <Button Text="Calcular IMC" Background="#4A0BD6" TextColor="White"
+                    FontAttributes="Bold" CornerRadius="8" HeightRequest="48" Clicked="Button_Clicked"/>
+
+            <!-- Tarjeta de resultado y rangos -->
+            <Border x:Name="brResultado" StrokeShape="RoundRectangle 12" Padding="20" IsVisible="False" Margin="0,10,0,0">
+                <VerticalStackLayout Spacing="10">
+                    <Label x:Name="lblValorIMC" FontSize="32" FontAttributes="Bold" HorizontalOptions="Center"/>
+                    <Label x:Name="lblDiagnostico" FontSize="16" FontAttributes="Bold" HorizontalOptions="Center"/>
+
+                    <!-- Label que explica los rangos del IMC debajo del resultado -->
+                    <Label Text="Rangos de IMC:&#x0a;• Menor a 18.5: Bajo peso&#x0a;• 18.5 - 24.9: Peso normal&#x0a;• 25.0 - 29.9: Sobrepeso&#x0a;• Mayor o igual a 30: Obesidad" 
+                           FontSize="13" TextColor="Gray" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="0,10,0,0"/>
+                </VerticalStackLayout>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PracticaUI.MainPage"
+             Title="MainPage">
+
+    <VerticalStackLayout Padding="30" Spacing="25" VerticalOptions="Center">
+        <Label Text="Bienvenido a PracticaUI"
+               FontSize="28"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <Label Text="Usa el menú o la navegación para abrir la Calculadora IMC."
+               FontSize="16"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center" />
+    </VerticalStackLayout>
+
+</ContentPage>
