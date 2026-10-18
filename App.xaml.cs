@@ -1,9 +1,19 @@
-﻿namespace PracticaUI;
+﻿using Microsoft.Extensions.DependencyInjection;
 
-public partial class App : Application
+namespace PracticaUI
 {
-    public App()
+    public partial class App : Application
     {
-        InitializeComponent();
+        public App()
+        {
+            InitializeComponent();
+      
+
+        }
+
+        protected override Window CreateWindow(IActivationState? activationState)
+        {
+            return new Window(new CalculadoraIMC());
+        }
     }
 }
